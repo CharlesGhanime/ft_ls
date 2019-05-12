@@ -6,7 +6,7 @@
 #    By: sikenn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 10:51:46 by sikenn            #+#    #+#              #
-#    Updated: 2019/05/12 14:23:37 by ichemmou         ###   ########.fr        #
+#    Updated: 2019/05/12 15:18:46 by ichemmou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,8 @@ $(NAME): $(OBJ)
 	@printf "$(GREEN)+$(RESET)"
 	@$(CC) -o $@ -c $(INC) $< $(CFLAGS) 
 
-test:
-	@$(TEST)
+getotp:
+	gcc test/getopt_test.c libft.a
 
 clean:
 	@printf "$(PURPLE)Objects:  $(RED)[DELETED]$(RESET)\n$(RESET)"
