@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 12:07:16 by sikenn            #+#    #+#             */
-/*   Updated: 2019/03/04 17:18:27 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/05/12 14:24:27 by ichemmou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # include "conv.h"
 # include "get_next_line.h"
 # include "lst.h"
-# include "ft_printf.h"
 # include "mem.h"
 # include "put.h"
 # include "str.h"
+# include "ft_getopt.h"
 
 #endif
