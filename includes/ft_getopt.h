@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_getopt.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ichemmou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/04 12:14:23 by sikenn            #+#    #+#             */
-/*   Updated: 2019/03/04 17:18:57 by sikenn           ###   ########.fr       */
+/*   Created: 2019/05/12 14:19:29 by ichemmou          #+#    #+#             */
+/*   Updated: 2019/05/12 14:20:27 by ichemmou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdarg.h>
+#ifndef FT_GETOPT_H
+# define FT_GETOPT_H
 
-int		ft_printf(char *format)
-{
-	t_list	*form;	
+int		ft_getopt(int ac, char **av, char *optstring);
 
-	form = parsing(format);
-	return (0);
-}
+#endif
