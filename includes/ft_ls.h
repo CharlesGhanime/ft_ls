@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ls.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:32:17 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/22 21:33:37 by sikenn           ###   ########.fr       */
+/*   Created: 2019/05/22 21:13:01 by sikenn            #+#    #+#             */
+/*   Updated: 2019/05/22 21:33:30 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_ls.h"
-#include <stdio.h>
+#ifndef FT_LS_H
+# define FT_LS_H
 
-int     main(void)
-{
-    printf("Hello World!");
-    ft_putstr("Dude, i work?\n");
-    return (0);
-}
+#endif

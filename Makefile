@@ -6,7 +6,7 @@
 #    By: sikenn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 10:51:46 by sikenn            #+#    #+#              #
-#    Updated: 2019/05/22 20:26:30 by sikenn           ###   ########.fr        #
+#    Updated: 2019/05/22 21:33:52 by sikenn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ TEST_DIR := ./test
 # Sources compilations #
 ########################
 
-SRCS = $(SRC_DIR)/main.c
+SRCS = $(SRC_DIR)/main.c \
+
 
 ########################
 # Objects compilations #
@@ -45,7 +46,9 @@ OBJS := $(addprefix $(OBJ_DIR)/, $(notdir $(SRCS:.c=.o)))
 
 CC = gcc -o
 CFLAGS = -Wall -Wextra -Werror
-INC = -Iincludes/
+INC_LS = -Iincludes/
+INC_LIBFT = -Ilibft/includes/
+LIB = libft/libft.a
 
 ##########
 # COLORS #
@@ -67,13 +70,13 @@ all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	@make -C $(LIB_DIR)
-	@$(CC) $(TARGET) $(OBJS)
+	@$(CC) $(TARGET) $(LIB) $(OBJS)
 	@mv $(TARGET) $(BIN_DIR)
 	@printf "\n$(BLUE)Building executable: $(RESET)$(GREEN)[Ok]$(RESET)\n$(RESET)"
 
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
 	@printf "$(GREEN)+$(RESET)"
-	@$(CC) $@ $(CFLAGS) -c $<
+	@$(CC) $@ $(CFLAGS) $(INC_LS) $(INC_LIBFT) -c $<
 
 $(OBJS): | $(OBJ_DIR)
 
@@ -105,3 +108,5 @@ build: all clean
 ########
 # TEST #
 ########
+
+
