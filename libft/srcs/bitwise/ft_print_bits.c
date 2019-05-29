@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_bits.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:32:17 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/29 17:41:10 by sikenn           ###   ########.fr       */
+/*   Created: 2019/05/29 17:32:25 by sikenn            #+#    #+#             */
+/*   Updated: 2019/05/29 17:43:02 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_ls.h"
-#include <stdio.h>
 
-int     main(int argc, char **argv)
+void    ft_print_bits(unsigned char octet)
 {
-    if (argc == 2)
-    {
-        int ret;
-        unsigned int c;
+    int i;
+    unsigned char c;
 
-        c = 0x00;
-        ft_print_bits(c);
-//        ft_print_bits(c);
-//        ft_list_dir(argv[1]);
-//        ft_inspect_file(argv[1]);
-        while ((ret = ft_getopt(argc, argv, "lRxrt")) != -1)         
+    i = 128;
+    while (i > 0)
+    {
+        if (octet < i)
         {
-            printf("ret == %c\nret == %d\n",ret, ret);
+            c = '0';
+            ft_putchar(c);
+            i /= 2;
+        }
+        else
+        {
+            c = '1';
+            ft_putchar(c);
+            octet = octet - i;
+            i /= 2;
         }
     }
-    return (0);
 }

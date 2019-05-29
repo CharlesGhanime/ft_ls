@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   bitwise.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 12:07:16 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/29 17:39:42 by sikenn           ###   ########.fr       */
+/*   Created: 2019/05/29 17:28:53 by sikenn            #+#    #+#             */
+/*   Updated: 2019/05/29 17:33:51 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef BITWISE_H
+# define BITWISE_H
 
-# include <string.h>
-# include "char.h"
-# include "conv.h"
-# include "get_next_line.h"
-# include "lst.h"
-# include "mem.h"
-# include "put.h"
-# include "str.h"
-# include "ft_getopt.h"
-# include "bitwise.h"
+void    ft_print_bits(unsigned char octet);
 
 #endif
