@@ -6,11 +6,14 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 21:13:01 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/22 21:33:30 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/05/29 13:03:29 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_H
 # define FT_LS_H
+
+int     ft_list_dir(char *dir);
+int     ft_inspect_file(char *path);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: sikenn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 10:51:46 by sikenn            #+#    #+#              #
-#    Updated: 2019/05/22 21:33:52 by sikenn           ###   ########.fr        #
+#    Updated: 2019/05/29 13:03:52 by sikenn           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ TEST_DIR := ./test
 # Sources compilations #
 ########################
 
-SRCS = $(SRC_DIR)/main.c \
+SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/ft_list_dir.c $(SRC_DIR)/ft_inspect_file.c \
 
 
 ########################

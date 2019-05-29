@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_list_dir.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:32:17 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/29 16:57:38 by sikenn           ###   ########.fr       */
+/*   Created: 2019/05/29 12:13:03 by sikenn            #+#    #+#             */
+/*   Updated: 2019/05/29 15:50:55 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_ls.h"
+#include <sys/types.h>
+#include <dirent.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-int     main(int argc, char **argv)
+int     ft_list_dir(char *dir)
 {
-    if (argc == 2)
-    {
-        int ret;
-        unsigned int c;
+    DIR *res;
+    struct dirent *obj;
 
-        c = 0x00;
-        ft_list_dir(argv[1]);
-        ft_inspect_file(argv[1]);
-        while ((ret = ft_getopt(argc, argv, "lRxrt")) != -1)         
-        {
-            printf("ret == %c\nret == %d\n",ret, ret);
-        }
+    if (!(res = opendir(dir)))
+    {
+        perror("Error: "); 
+        exit(0);
     }
-    return (0);
+    while ((obj = readdir(res)))
+    {
+        ft_putendl(obj->d_name);
+    }
+    if (closedir(res) == 0)
+        return (1);
+    return (-1);
 }
