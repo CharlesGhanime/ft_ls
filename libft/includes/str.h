@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/28 18:07:05 by sikenn            #+#    #+#             */
-/*   Updated: 2019/02/28 18:13:43 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/07/25 18:17:19 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,7 @@ char				*ft_strnew(size_t size);
 char				*ft_strjoinf(char **s1, char **s2, int flag);
 int					ft_strindex(char *str, char c);
 char				*ft_strinsert(char *s, char c);
+char				*ft_strrev(char *str);
+int					ft_strcmp_lex(const char *s1, const char *s2);
 
 #endif

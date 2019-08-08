@@ -6,7 +6,7 @@
 #    By: sikenn <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 10:51:46 by sikenn            #+#    #+#              #
-#    Updated: 2019/05/22 20:21:12 by sikenn           ###   ########.fr        #
+#    Updated: 2019/08/01 15:50:24 by cghanime         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,8 @@ SRCS = srcs/char/ft_isalpha.c srcs/char/ft_isalnum.c srcs/char/ft_isdigit.c \
 	srcs/str/ft_strmapi.c srcs/str/ft_striteri.c srcs/str/ft_striter.c \
 	srcs/str/ft_strclr.c srcs/str/ft_strdel.c srcs/str/ft_strnew.c \
 	srcs/str/ft_strjoinf.c srcs/str/ft_strindex.c srcs/str/ft_strinsert.c \
-	srcs/ft_getopt/ft_getopt.c \
+	srcs/ft_getopt/ft_getopt.c srcs/bitwise/ft_print_bits.c srcs/str/ft_strrev.c \
+	srcs/str/ft_strcmp_lex.c srcs/sorting/ft_sorting_tabs.c srcs/conv/ft_lltoa.c \
 
 ########################
 # Objects compilations #
@@ -85,7 +86,6 @@ RESET = \033[0m
 .PHONY: all
 all: $(TARGET)
 
-#$(MK_OBJ): | $(OBJ_DIR)
 
 $(TARGET): $(OBJ_DIR) $(OBJS) 
 	@$(AR) $(TARGET) $(OBJS) 

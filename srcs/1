@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   recursive.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/04 10:56:04 by sikenn            #+#    #+#             */
+/*   Updated: 2019/07/23 17:00:07 by fguarrac         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+#include "ft_ls.h"
+#include <stdio.h>
+
+int		scan_dirs_recu(unsigned char flags, char *path, t_link *node)
+{
+	while ((ft_strcmp(node->name, ".") == 0) || ft_strcmp(node->name, "..") == 0)
+	{
+		if (node->next)
+			node = node->next;
+		else
+			return (1);  
+	}
+	while (node)
+	{    
+		if (is_dir_file(ft_addir(path, node->name)))
+		{
+			path = ft_addir(path, node->name); 
+			dispatcher(flags, path, NULL);
+			path = ft_deldir(path); 
+		}
+		if (node->next)
+			node = node->next;
+		else
+			return (1);
+	}
+	return (0);
+}

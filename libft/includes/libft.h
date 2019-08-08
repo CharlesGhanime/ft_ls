@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 12:07:16 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/12 14:24:27 by ichemmou         ###   ########.fr       */
+/*   Updated: 2019/08/01 15:53:49 by cghanime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@
 # include "put.h"
 # include "str.h"
 # include "ft_getopt.h"
+# include "bitwise.h"
+# include "sorting.h"
 
 #endif

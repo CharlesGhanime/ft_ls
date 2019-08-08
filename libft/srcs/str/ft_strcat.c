@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 11:44:56 by sikenn            #+#    #+#             */
-/*   Updated: 2018/11/26 16:33:47 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/08/03 16:48:39 by sikenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strcat(char *s1, const char *s2)
 	size_t i;
 	size_t j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = ft_strlen(s1);
 	j = 0;
 	while (s2[j] != '\0')

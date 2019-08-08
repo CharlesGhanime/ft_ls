@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:55:18 by sikenn            #+#    #+#             */
-/*   Updated: 2019/05/29 15:37:45 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/06/25 15:24:01 by cghanime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int     ft_inspect_file(char *path)
         perror("Error: ");
         exit(0); 
     }
-    ft_putstr("Name: ");
-    ft_putendl(path);
-    ft_putstr("Type: ");
+	ft_putstr("Inode: ");
+	ft_putnbr(sb.st_ino);
+    ft_putstr("\nType: ");
     if (S_ISDIR(sb.st_mode)) 
         ft_putendl("Directory");
     if (S_ISREG(sb.st_mode)) 
