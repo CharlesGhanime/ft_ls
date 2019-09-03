@@ -6,7 +6,7 @@
 /*   By: fguarrac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 17:55:01 by fguarrac          #+#    #+#             */
-/*   Updated: 2019/08/07 13:43:29 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/08/22 13:42:25 by cghanime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ t_link			*ft_sorting(char *path)
 	DIR				*dir;
 	struct dirent	*file;
 
-	dir = opendir(path);
+	if(!(dir = opendir(path)))
+		ft_putstr("NON!");
 	head = NULL;
 	while ((file = readdir(dir)))
 	{

@@ -6,7 +6,7 @@
 /*   By: cghanime <cghanime@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/26 18:20:17 by cghanime          #+#    #+#             */
-/*   Updated: 2019/08/08 20:01:02 by cghanime         ###   ########.fr       */
+/*   Updated: 2019/08/08 21:12:04 by cghanime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,11 @@ void	ft_print_l(t_link *dir, char *path)
 
 	//buff = NULL;
 	user = getpwuid(dir->file_stat.st_uid);
-	group = getgrgid(dir->file_stat.st_gid);
+	if (!(group = getgrgid(dir->file_stat.st_gid)))
+	{
+		ft_putstr_fd("Permission denied", 1);
+		ft_putstr_fd(ft_itoa(dir->file_stat.st_gid), 1);
+	}
 	ft_memset(buff, '\0', PATH_MAX);
 
 	while (dir)
