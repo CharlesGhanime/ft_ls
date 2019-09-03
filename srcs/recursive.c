@@ -6,7 +6,7 @@
 /*   By: sikenn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 10:56:04 by sikenn            #+#    #+#             */
-/*   Updated: 2019/08/04 21:05:33 by sikenn           ###   ########.fr       */
+/*   Updated: 2019/09/03 20:19:39 by cghanime         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	scan_dirs_recu(unsigned char flags, char *path, char *target, t_link *dir)
 {
 	char	*tmp;
 
-	while (dir->next && ((dir->name[0] == '.' && !dir->name[1]) || (dir->name[0] == '.'  && dir->name[1] == '.' && !dir->name[2])))
+	while (dir->next && ((dir->name[0] == '.' && !dir->name[1])
+	|| (dir->name[0] == '.'  && dir->name[1] == '.' && !dir->name[2])))
 		dir = dir->next;
 	while (dir->next)
 	{
